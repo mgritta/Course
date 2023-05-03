@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-roboto-flex: "Roboto Flex";
+
+  /* Colors */
+  --color-white: #fff;
+
+  /* Paddings */
+  --padding-16xl: 35px;
+}

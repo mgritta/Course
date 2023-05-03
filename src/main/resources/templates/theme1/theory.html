@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<!--thymeleaf - берет из контролеров инфу-->
+<head>
+    <meta charset="UTF-8">
+
+    <!--    Подключение библиотеки с css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div style="background-color: #db9d5636; color: #3a291cf0">
+    <header style="background-color: #3a291cf0;" class="bd-header py-3 d-flex align-items-stretch border-bottom">
+        <div class="container-fluid d-flex align-items-center">
+            <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+                First, a bit of theory.
+            </h1>
+        </div>
+    </header>
+
+    <div style=" margin-top:20px; margin-left: 100px; margin-right: 100px;">
+        <p style="text-align: justify;">Russian nouns denoting people or animals (so-called animate nouns) answer the question Кто это?</p>
+        <p>All the other nouns(so-called inanimate nouns) answer the question Что это?</p>
+        <p>The questions Кто это? and Что это? are asked about nouns either in the singular or the plural.</p>
+
+        <h3>Masculine</h3>
+        <p style="text-align: justify;">Слова мужского рода часто оканчиваются на согласный. Masculine words end in a consonant:</p>
+        <ul>
+            <li>до-м</li>
+            <li>сто-л</li>
+            <li>Никола-й</li>
+        </ul>
+
+        <h3>Feminine</h3>
+        <p style="text-align: justify;">Слова женского рода часто окачиваются на -а,-я. Feminine words end in -a,-я.</p>
+        <ul>
+            <li>вод-а</li>
+            <li>школ-а</li>
+            <li>истори-я</li>
+        </ul>
+
+        <h3>Neuter</h3>
+        <p style="text-align: justify;">Слова средного рода часто oканчиваются на -о,-е. Neuter words end in -o,-e.</p>
+        <ul>
+            <li>окн-о</li>
+            <li>мор-е</li>
+            <li>здани-е</li>
+        </ul>
+
+        <p style="text-align: justify;">Слова, оканчивающиеся на мягкий знак (ь), могут быть мужского и женского рода. There are nouns of both masculine and feminine gender ending in a soft sign (ь).</p>
+
+        <h3>Masculine (he)</h3>
+        <ul>
+            <li>ден-ь</li>
+            <li>словар-ь</li>
+            <li>апрел-ь</li>
+        </ul>
+
+        <h3>Feminine (she)</h3>
+        <ul>
+            <li>жизн-ь</li>
+            <li>мат-ь</li>
+            <li>доч-ь</li>
+        </ul>
+
+        <p style="text-align: justify;">Некоторые слова мужского рода оканчиваются на -а, -я. There are masculine nouns ending in -a, -я.</p>
+        <ul>
+            <li>пап-а</li>
+            <li>дяд-я</li>
+            <li>юнош-а</li>
+        </ul>
+
+        <p style="text-align: justify;">Слова, оканчивающиеся на –мя, среднего рода. There are neuter nouns ending in -мя.</p>
+        <ul>
+            <li>имя</li>
+            <li>время</li>
+            <li>пламя</li>
+        </ul>
+    </div>
+
+<br>
+<a th:href="@{'/theme1/task1'}">
+    <button style="background-color: #3a291cf0; position: fixed; bottom:20px; right: 20px;" class="btn btn-secondary rounded-pill px-3" type="button" name="black-btn">Start a new topic</button>
+</a>
+</div>
+</body>
+</html>
+

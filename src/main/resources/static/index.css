@@ -1,0 +1,85 @@
+.theory {
+  position: absolute;
+  top: 27px;
+  left: 200px;
+  display: inline-block;
+  width: 216px;
+  height: 59px;
+}
+.theory-wrapper {
+  position: relative;
+  background-color: rgba(32, 20, 6, 0.88);
+  width: 1920px;
+  height: 112px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.russian-nouns-denoting {
+  font-weight: 30;
+}
+.span {
+  font-weight: 50;
+  font-family: var(--font-roboto-flex);
+}
+.russian-nouns-denoting-people {
+  margin-block-start: 0;
+  margin-block-end: 2px;
+}
+.all-the-other {
+  font-weight: 30;
+  font-family: var(--font-roboto-flex);
+}
+.the-questions {
+  margin-block-start: 0;
+  margin-block-end: 2px;
+  font-weight: 30;
+}
+.masculine {
+  margin-bottom: 0;
+}
+.masculine-feminine-neuter {
+  margin: 0;
+  padding-left: var(--padding-16xl);
+}
+.remember {
+  margin-block-start: 0;
+  margin-block-end: 2px;
+  font-weight: 50;
+}
+.blank-line6 {
+  margin: 0;
+  font-weight: 50;
+}
+.russian-nouns-denoting-container {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  white-space: pre-wrap;
+  display: inline-block;
+  width: 1775px;
+  height: 1108px;
+}
+.russian-nouns-denoting-people-wrapper {
+  flex: 1;
+  position: relative;
+  width: 1920px;
+  overflow: hidden;
+  font-size: inherit;
+  color: #000;
+}
+.frame-parent {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1424px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  text-align: left;
+  font-size: 12px;
+  color: var(--color-white);
+  font-family: var(--font-roboto-flex);
+}
