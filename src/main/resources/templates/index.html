@@ -21,8 +21,16 @@
         <div class="container-fluid">
             <h1 class="d-flex align-items-center fs-4 text-white mb-0" href="#">Russian as a foreign language</h1>
             <a th:href="@{'/author'}">
-                <button style="color: #463527; background-color:#f08c5fb0; border-color: #463527; margin-left:730px; gap: 10px;" class="btn btn-info" type="button">
+                <button style="color: #463527; background-color:#f08c5fb0; border-color: #463527; margin-left:650px; gap: 10px;"
+                        class="btn btn-info" type="button">
                     About author
+                </button>
+                <!--                <a th:href="@{'/theory_test'}">-->
+            </a>
+            <a th:href="@{'/myuser'}">
+                <button style="color: #463527; background-color:#f08c5fb0; border-color: #463527; margin-left:1px; gap: 10px;"
+                        class="btn btn-info" type="button">
+                    My profile
                 </button>
                 <!--                <a th:href="@{'/theory_test'}">-->
             </a>
@@ -69,9 +77,6 @@
             <th style="color: #311d0c; font-family: 'Roboto Flex',sans-serif; font-weight: lighter;" scope="col">Number
                 of tasks
             </th>
-            <th style="color: #311d0c; font-family: 'Roboto Flex',sans-serif; font-weight: lighter;" scope="col">
-                Completed tasks
-            </th>
         </tr>
         </thead>
         <tbody style="color: #311d0c; font-family: 'Roboto Flex',sans-serif; font-weight: lighter; background-color: #f9bb8d">
@@ -84,9 +89,6 @@
             </th>
             <th style="color: #311d0c; font-family: 'Roboto Flex',sans-serif; font-weight: lighter;" scope="row"
                 class="th" th:text="${theme.tasks}">Number of tasks
-            </th>
-            <th style="color: #311d0c; font-family: 'Roboto Flex',sans-serif; font-weight: lighter;" scope="row"
-                class="th" th:text="${theme.percentage}">Completed tasks
             </th>
 
             <td>
@@ -126,11 +128,6 @@
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.0.2/tablesort.min.js'></script>
     <script>
-        /*!
-    * tablesort v5.0.2 (2017-11-12)
-    * http://tristen.ca/tablesort/demo/
-    * Copyright (c) 2017 ; Licensed MIT
-    */
         !function () {
             function a(b, c) {
                 if (!(this instanceof a)) return new a(b, c);
@@ -208,43 +205,6 @@
         }();
     </script>
 
-    <!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
-
-    <!--    <canvas id="myChart"></canvas>-->
-
-    <!--    <script>-->
-    <!--        var ctx = document.getElementById('myChart').getContext('2d');-->
-    <!--        var myChart = new Chart(ctx, {-->
-    <!--            type: 'pie',-->
-    <!--            data: {-->
-    <!--                labels: ['Theme 1', 'Theme 2', 'Theme 3'],-->
-    <!--                datasets: [{-->
-    <!--                    label: 'Completed tasks',-->
-    <!--                    data: [2, 4, 1],-->
-    <!--                    backgroundColor: [-->
-    <!--                        'rgba(255, 99, 132, 0.2)',-->
-    <!--                        'rgba(54, 162, 235, 0.2)',-->
-    <!--                        'rgba(255, 206, 86, 0.2)'-->
-    <!--                    ],-->
-    <!--                    borderColor: [-->
-    <!--                        'rgba(255, 99, 132, 1)',-->
-    <!--                        'rgba(54, 162, 235, 1)',-->
-    <!--                        'rgba(255, 206, 86, 1)'-->
-    <!--                    ],-->
-    <!--                    borderWidth: 1-->
-    <!--                }]-->
-    <!--            },-->
-    <!--            options: {-->
-    <!--                responsive: true,-->
-    <!--                maintainAspectRatio: false,-->
-    <!--                title: {-->
-    <!--                    display: true,-->
-    <!--                    text: 'Completed Tasks by Theme'-->
-    <!--                }-->
-    <!--            }-->
-    <!--        });-->
-    <!--    </script>-->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
     <script type="text/javascript" style="color: #311d0c">
         function getRandomInt(min, max) {
@@ -278,7 +238,7 @@
         }
 
         let dataset = {
-            label: 'Number of tasks',
+            label: 'Number of themes',
             data: data,
             backgroundColor: colors,
             borderWidth: 1,
@@ -312,7 +272,7 @@
                         },
                         scaleLabel: {
                             display: true,
-                            labelString: 'Number of Tasks',
+                            labelString: 'Number of themes',
                             fontSize: 18,
                         },
                     }],

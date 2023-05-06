@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 /**
  */
 @Entity
+@Table(name="theme", schema="warehouse")
 public class Theme {
 
     /**
@@ -21,11 +22,6 @@ public class Theme {
      Количество заданий в теме.
      */
     private int tasks;
-    /**
-
-     Количество выполненных заданий.
-     */
-    private int percentage;
     /**
 
      Создает новый объект класса Theme.
@@ -82,69 +78,6 @@ public class Theme {
     public void setTasks(int tasks) {
         this.tasks = tasks;
     }
-    /**
 
-     Получает процент выполнения темы.
-     @return процент выполнения темы
-     */
-    public int getPercentage() {
-        return percentage;
-    }
-    /**
-
-     Устанавливает процент выполнения темы.
-     @param percentage процент выполнения темы
-     */
-    public void setPercentage(int percentage) {
-        this.percentage = percentage;
-    }
 }
 
-
-
-//------------------------------------------------//
-//@Entity
-//public class Theme {
-//    private Long ID;
-//    private String type;
-//    private int tasks;
-//    private int percentage;
-//
-//    protected Theme(){
-//
-//    }
-//
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    public Long getID() {
-//        return ID;
-//    }
-//
-//    public void setID(Long ID) {
-//        this.ID = ID;
-//    }
-//
-//    public String getType() {
-//        return type;
-//    }
-//
-//    public void setType(String type) {
-//        this.type = type;
-//    }
-//
-//    public int getTasks() {
-//        return tasks;
-//    }
-//
-//    public void setTasks(int tasks) {
-//        this.tasks = tasks;
-//    }
-//
-//    public int getPercentage() {
-//        return percentage;
-//    }
-//
-//    public void setPercentage(int percentage) {
-//        this.percentage = percentage;
-//    }
-//

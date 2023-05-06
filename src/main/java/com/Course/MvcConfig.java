@@ -22,13 +22,3 @@ public class MvcConfig implements WebMvcConfigurer {
 
     }
 }
-
-//---------------------//
-//@Configuration
-//public class MvcConfig implements WebMvcConfigurer {
-//
-//    @Override
-//    public void addViewControllers(ViewControllerRegistry registry) {
-//
-//    }
-//}

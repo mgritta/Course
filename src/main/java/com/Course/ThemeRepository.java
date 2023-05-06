@@ -1,5 +1,6 @@
 package com.Course;
 
+import com.Course.Theme;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -19,14 +20,6 @@ public interface ThemeRepository extends JpaRepository<Theme, Long> {
      @param keyword ключевые слова для поиска.
      @return список найденных тем, удовлетворяющих запросу.
      */
-    @Query("SELECT p FROM Theme p WHERE CONCAT(p.type, ' ', p.tasks, ' ', p.percentage) LIKE %?1%")
+    @Query("SELECT p FROM Theme p WHERE CONCAT(p.type, ' ', p.tasks) LIKE %?1%")
     List<Theme> search(String keyword);
 }
-
-
-//-------------------------------------------------//
-//public interface ThemeRepository extends JpaRepository<Theme, Long> {
-//    @Query("SELECT p FROM Theme p WHERE CONCAT(p.type, ' ', p.tasks, ' ', p.percentage) LIKE %?1%")
-//    List<Theme> search(String keyword);
-//
-//}

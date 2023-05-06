@@ -23,14 +23,3 @@ public class ThemeManagerApplication extends SpringBootServletInitializer{
 	}
 }
 
-
-//---------------------------------//
-//@SpringBootApplication
-//public class ThemeManagerApplication extends SpringBootServletInitializer{
-//
-//	public static void main(String[] args) {
-//		SpringApplication.run(ThemeManagerApplication.class, args);
-//	}
-//
-//}
-
