@@ -33,9 +33,7 @@ public class MyUser {
     /**
 
      Конструктор без параметров для создания объекта MyUser.
-     */
-    protected MyUser(){
-    }
+     *
 
     /**
 

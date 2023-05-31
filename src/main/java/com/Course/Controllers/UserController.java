@@ -40,6 +40,15 @@ public class UserController {
         return "myuser";
     }
 
+    @RequestMapping("/new_user")
+    public String NewUser(Model model){
+        MyUser myUser = new MyUser();
+        model.addAttribute("myUser", myUser);
+        System.out.println(1);
+        return "new_user";
+
+    }
+
     /**
      * Сохраняет объект MyUser в базу данных.
      * @param myUser объект MyUser для сохранения
@@ -72,6 +81,6 @@ public class UserController {
     @RequestMapping("/delete/{id}")
     public String deleteCar(@PathVariable(name = "id") Long id) {
         user_service.delete(id);
-        return "redirect:/";
+        return "redirect:/myuser";
     }
 }

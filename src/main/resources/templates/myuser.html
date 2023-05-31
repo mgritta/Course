@@ -20,11 +20,11 @@
     </div>
 </header>
 <div>
-    <table id="1" style="color: #311d0c" class="table table-striped table-hover">
+    <table id="user-table" style="color: #311d0c" class="table table-striped table-hover">
         <thead>
         <tr>
-            <th style="color: #311d0c; font-family: 'Roboto Flex',sans-serif; font-weight: lighter;" scope="col">ID
-            </th>
+<!--            <th style="color: #311d0c; font-family: 'Roboto Flex',sans-serif; font-weight: lighter;" scope="col">ID-->
+<!--            </th>-->
 <!--            <th style="color: #311d0c; font-family: 'Roboto Flex',sans-serif; font-weight: lighter;" scope="col">Name-->
 <!--            </th>-->
             <th style="color: #311d0c; font-family: 'Roboto Flex',sans-serif; font-weight: lighter;" scope="col">Name
@@ -37,9 +37,9 @@
         </thead>
         <tbody style="color: #311d0c; font-family: 'Roboto Flex',sans-serif; font-weight: lighter; background-color: #f9bb8d">
         <tr th:each="myUser: ${listMyUser}" class="tr">
-            <th style="color: #311d0c; font-family: 'Roboto Flex',sans-serif; font-weight: lighter;" scope="row"
-                class="th" th:text="${myUser.ID}">ID
-            </th>
+<!--            <th style="color: #311d0c; font-family: 'Roboto Flex',sans-serif; font-weight: lighter;" scope="row"-->
+<!--                class="th" th:text="${myUser.ID}">ID-->
+<!--            </th>-->
 <!--            <th style="color: #311d0c; font-family: 'Roboto Flex',sans-serif; font-weight: lighter;" scope="row"-->
 <!--                class="th" th:text="${myUser.name}">Name-->
 <!--            </th>-->
@@ -70,14 +70,32 @@
         </tr>
         </tbody>
     </table>
-<!--    <blockquote class="blockquote text-center">-->
-<!--        <a th:href="@{'/new_user'}">-->
-<!--            <button style="background-color: #3a291cf0;" id="add-data-btn" type="button" class="btn btn-secondary rounded-pill px-3" data-togge="button" aria-pressed="false" autocomplete="off">-->
-<!--                Add info-->
-<!--            </button>-->
-<!--        </a>-->
+    <blockquote class="blockquote text-center">
+        <a th:href="@{'/new_user'}" style="text-decoration: none; display: inline-block;">
+            <button style=" background-color: #3a291cf0;" id="add-data-btn" type="button" class="btn btn-secondary rounded-pill px-3" data-togge="button" aria-pressed="false" autocomplete="off">
+                Add info
+            </button>
 
-<!--    </blockquote>-->
+        </a>
+
+    </blockquote>
+    <script>
+        window.onload = function() {
+            checkTableData();
+        };
+
+        function checkTableData() {
+            var userTable = document.getElementById("user-table");
+            var addButton = document.getElementById("add-data-btn");
+
+            if (userTable.rows.length <= 1) {
+                addButton.style.display = "block";
+            } else {
+                addButton.style.display = "none";
+            }
+        }
+
+    </script>
 
     <a th:href="@{'/'}">
         <button style="background-color: #3a291cf0; position: fixed; bottom:20px; left: 20px;"
